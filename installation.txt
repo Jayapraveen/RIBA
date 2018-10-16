@@ -1,0 +1,2 @@
+pip install chatterbot
+pip install --upgrade chatterbot==0.7.4
