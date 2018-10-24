@@ -5,7 +5,9 @@ cache: pip
 python:
   - '3.6'
 
-
+virtualenv:
+  system_site_packages: true
+  
 install:
   - sudo pip install Django
   - sudo pip install chatterbot 
