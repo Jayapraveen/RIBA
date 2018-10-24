@@ -1,20 +1,20 @@
+travis encrypt "finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4" --add notifications.slack
+
 language: python
 cache: pip
 
 python:
   - '3.6'
 
-os:
-  - linux
-
-before_install:
-  - sudo pip install chatterbot
 
 install:
-  - timeout 20s python manage.py runserver 0:8080
+  - sudo pip install chatterbot 
 
+script:
+- cd django_app
+- timeout 20s python manage.py runserver 0:8080
+  
         
-travis encrypt "finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4" --add notifications.slack
 
 notifications:
   slack:
