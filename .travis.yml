@@ -7,18 +7,18 @@ python:
 os:
   - linux
 
-services:
-  - mongodb
+before_install:
+  - sudo pip install chatterbot
 
 install:
-  - pip install tox coveralls codeclimate-test-reporter
+  - timeout 20s python manage.py runserver 0:8080
 
-addons:
-    code_climate:
-        repo_token: 3ec30a156224df0f59620967241d9659086e918fd824f4f69b8ce7b55b5a590f
+        
+travis encrypt "finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4" --add notifications.slack
 
-script:
-  - tox
+notifications:
+  slack:
+    rooms:
+      - finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4#project
 
-after_success:
-  - coveralls
+
