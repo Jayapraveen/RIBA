@@ -1,4 +1,3 @@
-travis encrypt "finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4" --add notifications.slack
 
 language: python
 cache: pip
