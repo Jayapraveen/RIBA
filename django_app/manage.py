@@ -1,4 +1,4 @@
-#!~/projectpath/venv/bin/python python
+#!~/virtualenv/python3.6.3 python
 import os
 import sys
 
