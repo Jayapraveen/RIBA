@@ -6,12 +6,12 @@ python:
   - '3.6'
 
 install:
-  - sudo pip install Django
-  - sudo pip install chatterbot 
+  - pip install Django
+  - pip install chatterbot 
 
 script:
 - cd django_app
-- timeout 20s python manage.py runserver 0:8080
+- timeout 20s python3 manage.py runserver 0:8080
 
 notifications:
   slack:
