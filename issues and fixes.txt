@@ -1,3 +1,5 @@
 u'chatterbot' is not a registered namespace - https://github.com/gunthercox/ChatterBot/issues/1373
 
 Django - “no module named django.core.management”  - https://stackoverflow.com/questions/14013728/django-no-module-named-django-core-management
+
+travis ci system site package - https://github.com/travis-ci/travis-ci/issues/8336

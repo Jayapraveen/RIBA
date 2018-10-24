@@ -1,13 +1,9 @@
-
 language: python
 cache: pip
 
 python:
   - '3.6'
 
-virtualenv:
-  - system_site_packages: true
-  
 install:
   - sudo pip install Django
   - sudo pip install chatterbot 
@@ -15,8 +11,6 @@ install:
 script:
 - cd django_app
 - timeout 20s python manage.py runserver 0:8080
-  
-        
 
 notifications:
   slack:
