@@ -1,1 +1,0 @@
-u'chatterbot' is not a registered namespace - https://github.com/gunthercox/ChatterBot/issues/1373
