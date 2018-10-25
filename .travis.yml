@@ -6,8 +6,8 @@ python:
   - '3.6'
 
 install:
-  - pip install Django
-  - pip install chatterbot 
+  - pip3 install Django
+  - pip3 install chatterbot 
 
 script:
 - cd django_app
