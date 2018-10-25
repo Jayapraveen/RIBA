@@ -12,7 +12,8 @@ install:
 
 script:
 - cd django_app
-- timeout 20s python manage.py runserver 0:8080
+- python manage.py migrate
+- python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 
 notifications:
   slack:
