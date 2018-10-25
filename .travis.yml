@@ -6,7 +6,8 @@ python:
   - '2.7.6'
 
 install:
-  - pip install Django
+  - python -m pip install --upgrade pip setuptools
+  - pip install Django==1.9
   - pip install chatterbot 
 
 script:
