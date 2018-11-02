@@ -10,7 +10,6 @@ $(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
     fakeMessage();
-    fakeMessage();
   }, 100);
 });
 
@@ -59,8 +58,7 @@ $(window).on('keydown', function(e) {
 });
 
 var Fake = [
-  'Hi, I\'m RIBA',
-  'Nice to meet you'
+  'Hi, I\'m RIBA, Nice to meet you',
 ]
 
 function fakeMessage() {
