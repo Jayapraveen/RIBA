@@ -25,5 +25,3 @@ notifications:
   slack:
     rooms:
       - finalcseproject:fm7EyjQgdk8HsSdLVXkKV0C4#project
-
-
