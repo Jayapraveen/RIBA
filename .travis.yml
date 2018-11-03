@@ -27,6 +27,8 @@ deploy:
   provider: heroku
   api_key:
     secure: "812b83f0-3a0e-45b0-9d25-6866908e0fcb"
+   app:riba-test
+    production: riba-test
 
 notifications:
   slack:
