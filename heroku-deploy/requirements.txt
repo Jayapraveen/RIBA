@@ -1,0 +1,6 @@
+django>=1.8.0,<2.0.0
+chatterbot>=0.7.6,<0.7.7
+gunicorn
+whitenoise
+dj-database-url
+psycopg2

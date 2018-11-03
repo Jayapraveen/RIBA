@@ -1,0 +1,25 @@
+//heroku login
+heroku login
+
+// GIT
+git add .
+git commit -m "comment"
+git push -u origin
+
+//heroku limits
+heroku config:set WEB_CONCURRENCY=3
+
+//heroku db link
+heroku run manage.py migrate
+
+//heroku train
+heroku run manage.py train
+
+//heroku dbg
+heroku logs --tail
+
+//heroku bash 
+heroku apps
+heroku run bash --app riba-testing0
+
+ 
