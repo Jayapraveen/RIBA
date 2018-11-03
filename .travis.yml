@@ -12,7 +12,14 @@ install:
 
 script:
 - cd django_app
+- pwd
 - python manage.py migrate
+- chmod 777 /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/corpus.py
+- rm /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/corpus.py
+- cd /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/
+- wget http://fs1.jayapraveenar.me/cgi-bin/corpus.py
+- chmod 777 corpus.py
+- cd ~/travis/django_app
 - python manage.py train
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 
