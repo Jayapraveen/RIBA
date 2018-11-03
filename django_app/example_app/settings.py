@@ -33,8 +33,16 @@ INSTALLED_APPS = (
 # ChatterBot settings
 
 CHATTERBOT = {
-    'name': 'Django ChatterBot Example',
-    'django_app_name': 'django_chatterbot'
+    'name': 'RIBA',
+    'logic_adapters': [
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
+    ],
+    'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
+    'training_data': [
+         'chatterbot.corpus.english'
+    ]
 }
 
 MIDDLEWARE_CLASSES = (
