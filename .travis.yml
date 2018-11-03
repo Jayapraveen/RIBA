@@ -16,6 +16,11 @@ script:
 - python manage.py train
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YOUR ENCRYPTED API KEY"
+
 notifications:
   slack:
     rooms:
