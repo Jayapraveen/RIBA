@@ -22,4 +22,11 @@ heroku logs --tail
 heroku apps
 heroku run bash --app riba-testing0
 
- 
+//heroku clear cache
+
+
+Use heroku-repo plugin purge_cache command:
+
+heroku plugins:install heroku-repo
+heroku repo:purge_cache -a appname
+
