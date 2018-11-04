@@ -1,11 +1,11 @@
 sudo: required
 language: python
 cache: pip
-python:
-- 2.7.6
+env:
+  - DJANGO_VERSION=1.9
 install:
 - python -m pip install --upgrade pip setuptools
-- pip install Django==1.9
+- pip install Django==$DJANGO_VERSION
 - pip install chatterbot
 script:
 - cd django_app
