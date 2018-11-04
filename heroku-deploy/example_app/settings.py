@@ -32,13 +32,15 @@ INSTALLED_APPS = (
 # ChatterBot settings
 
 CHATTERBOT = {
-    'name': 'Heroku ChatterBot Example',
+    'name': 'RIBA',
     'logic_adapters' : [
-        "chatterbot.logic.BestMatch"
+        'chatterbot.logic.MathematicalEvaluation',
+        'chatterbot.logic.TimeLogicAdapter',
+        'chatterbot.logic.BestMatch'
     ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
-        'chatterbot.corpus'
+        'chatterbot.corpus.english'
     ]
 }
 

@@ -24,7 +24,7 @@ deploy:
   provider: heroku
   api_key:
     secure: i7wAbRaipssbDB2CAO9l7VLGEyHQLo4JsJjmoUwADw0XgwAaOw8dtecUgY3ZQI/Tpumi68oVh51smqASdKc0HhYOTD38MFqpZI5syHoExJbBrjGifBKHg16I00V/4F8zJzMK0rCtkCQxQBVrTviwsdDCVomiskZHFosjXP7+cMNHfqPdK+RfmzMHmCzP9B2ie0CIhm9ZWV1LbaIW82CDkrl6q+Zf/7dtyHMKFwEnvEp8M+POfpwBXfaZmEAW1Wh01esLrX61jwefqVvseW7IEu+3fCmYqxaOHMNCDNfVgk09SGZsA3mTHSz6N7ixggP4/FfKxFkw5BUFvIzeDLggDfWk+/X1NuAuYwY9PpMzbdqC+AB5+Nt4SKfSig/HaeWCrLMny3vfJDFtwD8+WWYxFUyZIUTsZsKjhQ3z3bxaUHrQuuVUmlZ87E2HPnVmog5FjPttl+zDgwP4EVQ4ANyFEl8wS/kRZujJf33hiUT/v4WAWeY3wX8grxW0PDMqj/6WAUTd6OgYEKY3fMpXjf/VEuDK6YlnT0WE/F3add7R+Vf2Ae6QQljY8KUJjPssS0WdaI3swII2Qd1cjpoxBzSg5OlNrzCBnXlKnTvqqDJ9sOxuKyufieeT/1RC5eELb/P0lEcyMW/1TS3OEvGh/bN1PCKyqzKNz+F7kZqSAyGTloI=
-  app: riba-test
+  app: riba-testing0
   on:
     repo: Jayapraveen/RIBA
 notifications:

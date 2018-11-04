@@ -3,4 +3,4 @@ chatterbot>=0.7.6,<0.7.7
 gunicorn
 whitenoise
 dj-database-url
-psycopg2
+psycopg2-binary
