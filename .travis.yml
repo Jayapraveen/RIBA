@@ -2,22 +2,16 @@ sudo: required
 language: python
 cache: pip
 python:
-- 2.7.6
+- 2.7.15
 install:
 - python -m pip install --upgrade pip setuptools
 - pip install Django==1.9
-- pip install chatterbot
+- pip install chatterbot>=0.7.6,<0.7.7
 script:
 - cd django_app
 - path="$(pwd)"
 - echo "$path"
 - python manage.py migrate
-- chmod 777 /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/corpus.py
-- rm /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/corpus.py
-- cd /home/travis/virtualenv/python2.7.6/lib/python2.7/site-packages/chatterbot_corpus/
-- wget http://fs1.jayapraveenar.me/cgi-bin/corpus.py
-- chmod 777 corpus.py
-- cd "$path"
 - python manage.py train
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 deploy:
