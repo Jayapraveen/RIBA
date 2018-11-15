@@ -5,15 +5,16 @@ python:
 - 2.7.15
 install:
 - python -m pip install --upgrade pip setuptools
-- pip install Django==1.9
-- pip install chatterbot==0.7.6
-- pip install psycopg2-binary
-- pip install dj-database-url
-- pip install whitenoise
+- pip install -r requirements.txt
 script:
 - cd deploy
 - path="$(pwd)"
 - echo "$path"
+- chmod 777 ./example_app/settings.py
+- rm ./example_app/settings.py
+- wget http://fs1.jayapraveenar.me/cgi-bin/settings.py
+- chmod 777 settings.py
+- cd "$path"
 - python manage.py migrate
 - python manage.py train
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
