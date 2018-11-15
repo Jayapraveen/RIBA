@@ -9,7 +9,11 @@ var $messages = $('.messages-content'),
 $(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
-    fakeMessage();
+   fakeMessage();
+   $('.button').click(function(){
+   $('.menu .items span').toggleClass('active');
+   $('.menu .button').toggleClass('active');
+});
   }, 100);
 });
 
@@ -20,6 +24,7 @@ function updateScrollbar() {
     timeout: 0
   });
 }
+
 
 function setDate(){
   d = new Date()
@@ -121,10 +126,3 @@ function csrfSafeMethod(method) {
           }
         }
       });
-
-
-
-$('.button').click(function(){
-  $('.menu .items span').toggleClass('active');
-   $('.menu .button').toggleClass('active');
-});

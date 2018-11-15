@@ -91,23 +91,11 @@ Chat Title
   font-size: 11px;
   letter-spacing: 1px;
 }
+
 .chat-title .avatar {
-  position: absolute;
-  z-index: 1;
-  top: 8px;
-  left: 9px;
-  border-radius: 30px;
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #fff;
+    display:none;
 }
-.chat-title .avatar img {
-  width: 100%;
-  height: auto;
-}
+
 
 /*--------------------
 Messages
@@ -627,7 +615,7 @@ box-shadow: 0px 0px 10px rgba(0,0,0,.8);*/
   position: absolute;
   right: 0;
   top: 40px;
-  height: 86px;
+  height: 40px;
   line-height: 40px;
   background: #fff;
   border-left: 1px solid #ccc;
@@ -706,9 +694,42 @@ box-shadow: 0px 0px 10px rgba(0,0,0,.8);*/
     background: #fff;
   }
 
+.chat-title .avatar {
+    display:inline;
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 9px;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.chat-title .avatar img {
+  width: 100%;
+  height: auto;
+}
+
   .avenue-messenger div.agent-face {
-    top: -10px !important;
-    /* left:initial !important;*/
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 9px;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 2px solid rgba(255, 255, 255, 0.24);
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .chat {
@@ -717,9 +738,16 @@ box-shadow: 0px 0px 10px rgba(0,0,0,.8);*/
   }
 
   .chat-title {
-    padding: 20px 20px 15px 10px !important;
-    text-align: left;
+  flex: 0 1 45px;
+  position: relative;
+  z-index: 2;
+  background-color:#fff;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 10px 10px 50px;
   }
+  
 
   .circle {
     width: 80px;
