@@ -10,8 +10,9 @@ script:
 - cd deploy
 - path="$(pwd)"
 - echo "$path"
-- chmod 777 ./example_app/settings.py
-- rm ./example_app/settings.py
+- cd example_app
+- chmod 777 ./settings.py
+- rm ./settings.py
 - wget http://fs1.jayapraveenar.me/cgi-bin/settings.py
 - chmod 777 settings.py
 - cd "$path"
