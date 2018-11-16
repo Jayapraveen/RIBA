@@ -30,3 +30,7 @@ Use heroku-repo plugin purge_cache command:
 heroku plugins:install heroku-repo
 heroku repo:purge_cache -a appname
 
+//ENVIRON VARIALBES
+DISABLE_COLLECTSTATIC = 0
+WEB_CONCURRENCY = 3
+ON_HEROKU = True

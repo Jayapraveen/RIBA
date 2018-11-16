@@ -81,7 +81,24 @@ WSGI_APPLICATION = 'example_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES={'default': dj_database_url.config()}
+
+ON_HEROKU = os.environ.get('ON_HEROKU')
+
+if ON_HEROKU:
+
+   DATABASES={'default': dj_database_url.config()}
+else: #on Travis
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'travis_ci_riba',
+            'USER': 'postgres',
+            'PASSWORD': '',
+            'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+            'PORT': '',  
+        }
+    }
+
 
 
 # Internationalization

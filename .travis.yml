@@ -6,7 +6,7 @@ python:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database travis_ci_riba;' -U postgres
 install:
 - python -m pip install --upgrade pip setuptools
 - pip install -r requirements.txt
