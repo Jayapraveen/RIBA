@@ -36,7 +36,6 @@ CHATTERBOT = {
     'name': 'RIBA',
     'logic_adapters' : [
         'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch',
         'example_app.meddb.MedDatabaseAdapter'
     ],
