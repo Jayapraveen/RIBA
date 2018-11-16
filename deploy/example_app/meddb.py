@@ -56,7 +56,7 @@ class MedDatabaseAdapter(LogicAdapter):
         Data=[('brandname',medicine)]
         Data=urllib.parse.urlencode(Data)
         path="http://fs1.jayapraveenar.me/RIBA/meddb.php"
-        request=urllib.request.urlopen(path,Data)
+        request=urllib.request.Request(path,Data)
         request.add_header("Content-type","application/x-www-form-urlencoded")
         output=urllib.request.urlopen(request).read()
         #print output
