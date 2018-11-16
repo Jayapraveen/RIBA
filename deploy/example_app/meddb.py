@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import re
 from chatterbot.logic import LogicAdapter
-import urllib2
 import urllib
 import json
 
@@ -56,9 +55,9 @@ class MedDatabaseAdapter(LogicAdapter):
         Data=[('brandname',medicine)]
         Data=urllib.urlencode(Data)
         path="http://fs1.jayapraveenar.me/RIBA/meddb.php"
-        request=urllib2.Request(path,Data)
+        request=urllib.Request(path,Data)
         request.add_header("Content-type","application/x-www-form-urlencoded")
-        output=urllib2.urlopen(request).read()
+        output=urllib.urlopen(request).read()
         #print output
         out= json.loads(output)
         #print (out['Manufacturer'])
