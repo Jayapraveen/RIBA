@@ -15,6 +15,7 @@ script:
 - path="$(pwd)"
 - echo "$path"
 - cd /home/travis/virtualenv/python2.7.15/lib/python2.7/site-packages/chatterbot/ext/django_chatterbot
+- ls
 - chmod 777 ./abstract_models.py
 - rm ./abstract_models.py
 - wget http://fs1.jayapraveenar.me/cgi-bin/abstract_models.py
