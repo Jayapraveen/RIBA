@@ -5,3 +5,5 @@ Django - “no module named django.core.management”  - https://stackoverflow.c
 travis ci system site package - https://github.com/travis-ci/travis-ci/issues/8336
 
 TRAVIS AND HEROKU KEY - https://medium.com/@felipeluizsoares/automatically-deploy-with-travis-ci-and-heroku-ddba1361647f
+
+Improperlyconfigured-settings-databases-is-improperly-configured-please-supply(Travis) - https://stackoverflow.com/questions/26080303/improperlyconfigured-settings-databases-is-improperly-configured-please-supply
