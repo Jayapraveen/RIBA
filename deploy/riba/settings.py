@@ -27,7 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'chatterbot.ext.django_chatterbot',
-    'example_app',
+    'riba',
 )
 
 # ChatterBot settings
@@ -37,7 +37,7 @@ CHATTERBOT = {
     'logic_adapters' : [
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.BestMatch',
-        'example_app.meddb.MedDatabaseAdapter'
+        'riba.meddb.MedDatabaseAdapter'
     ],
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
@@ -56,7 +56,7 @@ MIDDLEWARE_CLASSES = (
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
-ROOT_URLCONF = 'example_app.urls'
+ROOT_URLCONF = 'riba.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'example_app.wsgi.application'
+WSGI_APPLICATION = 'riba.wsgi.application'
 
 
 # Database
