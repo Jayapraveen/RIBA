@@ -14,10 +14,7 @@ script:
 - cd deploy
 - path="$(pwd)"
 - echo "$path"
-- python manage.py migrate --run-syncdb
-- python manage.py makemigrations
 - python manage.py migrate
-- python manage.py train
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 deploy:
   provider: heroku
