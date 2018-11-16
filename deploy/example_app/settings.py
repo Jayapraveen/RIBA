@@ -89,7 +89,7 @@ DATABASES={'default': dj_database_url.config()}
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'IST'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 

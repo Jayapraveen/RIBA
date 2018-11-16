@@ -1,6 +1,0 @@
-Django==1.9
-chatterbot>=0.7.6,<0.7.7
-gunicorn
-whitenoise
-dj-database-url
-psycopg2-binary
