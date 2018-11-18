@@ -47,6 +47,7 @@ CHATTERBOT = {
 }
 
 MIDDLEWARE_CLASSES = (
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -55,8 +56,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 )
 
 ROOT_URLCONF = 'riba.urls'
@@ -116,9 +115,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-CORS_ORIGIN_WHITELIST = (
-    'http://fs1.jayapraveenar.me',
-)
+
 CORS_ORIGIN_REGEX_WHITELIST = (r'^(https?://)?(\w+\.)?jayapraveenar\.me$', )
 CORS_ORIGIN_REGEX_WHITELIST = (r'^(http?://)?(\w+\.)?jayapraveenar\.me$', )
 CORS_ORIGIN_REGEX_WHITELIST = (r'^(http?://)?(\r+\.)?jayapraveenar\.me$', )
