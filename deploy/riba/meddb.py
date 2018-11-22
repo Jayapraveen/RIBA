@@ -18,7 +18,7 @@ class MedDatabaseAdapter(LogicAdapter):
 
         user_input = statement.text.lower()
 
-        if 'brandname=' not in user_input:
+        if ('medicine' and 'manufacturer') not in user_input:
             
             response_statement = Statement('')
             response_statement.confidence = 0
@@ -38,13 +38,14 @@ class MedDatabaseAdapter(LogicAdapter):
 
     def get_med(self, user_input):
         """
-        Returns the brandname extracted from input.
+        Returns the medicine name extracted from input.
         """
         from nltk import tokenize
 
         for token in tokenize.word_tokenize(user_input):
-            if 'brandname=' in token:
-                return (re.sub('brandname=', '', user_input).lstrip())
+            if 'medicine' in token:
+                #return (re.sub('medicine', '', user_input).lstrip())
+                return (user_input.split('medicine')[1]).lstrip()
 
         return ''
     def get_info(self, medicine):
