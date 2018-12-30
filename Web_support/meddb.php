@@ -1,12 +1,12 @@
-<?php error_reporting(-1); ini_set('display_errors', 'On'); $response =
+<?php 
+
+require("aaa/serv_db_cred.php");
+
+error_reporting(-1); ini_set('display_errors', 'On'); $response =
+
 
 array("error" => FALSE); $servername = "localhost"; //db host
 
-$username = "fsjayapr"; //db user
-
-$password = "n8Ai65ul0F";//db password
-
-$dbname = "fsjayapr_db"; //db name
 
 if(isset($_POST['brandname'])){
     $brandname= $_POST['brandname'];
