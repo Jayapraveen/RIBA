@@ -11,8 +11,11 @@ addons:
     packages:
     - postgresql-10
     - postgresql-client-10
+  env:
+  global:
+  - PGPORT=5433
 before_script:
-  - psql -c 'create database travis_ci_riba;' -U postgres
+  - psql -c 'create database travis_ci_riba;' -U postgres -p 5433
 install:
 - python -m pip install --upgrade pip setuptools
 - pip install -r requirements.txt
