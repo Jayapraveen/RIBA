@@ -17,6 +17,7 @@ script:
 - path="$(pwd)"
 - echo "$path"
 - python manage.py migrate
+- python train_riba.py
 - python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 deploy:
   provider: heroku
