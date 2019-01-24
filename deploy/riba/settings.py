@@ -44,7 +44,7 @@ CHATTERBOT = {
     ],
 }
 
-chatbot = ChatBot('RIBA')
+
 trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train('chatterbot.corpus.english')
 
