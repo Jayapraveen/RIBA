@@ -4,4 +4,4 @@ from chatterbot import ChatBot
 chatbot = ChatBot('RIBA')
 trainer = ChatterBotCorpusTrainer(chatbot)
 trainer.train('chatterbot.corpus.english')
-trainer.train($path/rec)
+trainer.train('$path/rec')
