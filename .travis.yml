@@ -18,7 +18,7 @@ script:
 - echo "$path"
 - python manage.py migrate
 - python train_riba.py
-- gunicorn --chdir /app/deploy riba.wsgi --log-file - & sleep 20 | trap exit INT
+- gunicorn riba.wsgi --log-file - & sleep 20 | trap exit INT
 deploy:
   provider: heroku
   api_key:
