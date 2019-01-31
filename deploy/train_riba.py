@@ -1,7 +1,7 @@
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot import ChatBot
 import os
-print os.getcwd()
+print(os.getcwd())
 wd = os.getcwd()
 
 chatbot = ChatBot('RIBA')
