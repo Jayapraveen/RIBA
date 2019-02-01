@@ -18,7 +18,7 @@ if ON_HEROKU:
     trainer.train("chatterbot.corpus.english.greetings",
     "chatterbot.corpus.english.ai",
     "chatterbot.corpus.english.literature",
-    "chatterbot.corpus.english.psycology",
+    "chatterbot.corpus.english.psychology",
     "chatterbot.corpus.english.science",
     "chatterbot.corpus.english.computers",
     "chatterbot.corpus.english.conversations",
