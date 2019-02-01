@@ -33,10 +33,6 @@ INSTALLED_APPS = (
 CHATTERBOT = {
     'name': 'RIBA',
     'django_app_name': 'django_chatterbot'
-    'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
-    'training_data': [
-        'chatterbot.corpus.english'
-    ],
 }
 
 
