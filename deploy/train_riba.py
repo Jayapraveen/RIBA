@@ -13,6 +13,7 @@ if ON_HEROKU:
     chatbot = ChatBot('RIBA',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     database_uri=uri)
+    chatbot.storage.drop()
     trainer = ChatterBotCorpusTrainer(chatbot)
     os.system("wget http://riba-support.000webhostapp.com/RIBA/training-data/rec.yml")
     trainer.train("chatterbot.corpus.english",
@@ -22,6 +23,7 @@ if ON_HEROKU:
 else: #on Travis
     chatbot = ChatBot('RIBA')
     trainer = ChatterBotCorpusTrainer(chatbot)
+    chatbot.storage.drop()
     trainer.train("chatterbot.corpus.english",
     wd + "/rec/rec.yml"
     )
