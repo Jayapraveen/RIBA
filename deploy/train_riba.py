@@ -10,12 +10,12 @@ ON_HEROKU = os.environ.get('ON_HEROKU')
 
 if ON_HEROKU:
     uri = os.environ.get('DATABASE_URL')
-    chatbot = ChatBot('RIBA',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri= uri)
+    chatbot = ChatBot('RIBA')
     trainer = ChatterBotCorpusTrainer(chatbot)
     os.system("wget http://riba-support.000webhostapp.com/RIBA/training-data/rec.yml")
-    trainer.train("chatterbot.corpus.english")
+    trainer.train("chatterbot.corpus.english",
+    wd + "/rec.yml"
+    )
 
 else: #on Travis
     chatbot = ChatBot('RIBA')
