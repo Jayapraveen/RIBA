@@ -33,6 +33,15 @@ INSTALLED_APPS = (
 CHATTERBOT = {
     'name': 'RIBA',
     'django_app_name': 'django_chatterbot'
+    'logic_adapters': [
+        {
+            'import_path': 'chatterbot.logic.BestMatch',
+        },
+        {
+            'import_path': 'chatterbot.logic.MathematicalEvaluation',
+        }
+    ],
+'storage_adapter': 'chatterbot.storage.DjangoStorageAdapter',
 }
 
 
@@ -93,6 +102,10 @@ else: #on Travis
     }
 
 
+# Using the MD5 password hasher improves test performance
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.MD5PasswordHasher',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
@@ -107,6 +120,22 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+    },
+}
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
