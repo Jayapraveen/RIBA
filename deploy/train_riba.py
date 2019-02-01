@@ -22,7 +22,7 @@ if ON_HEROKU:
     "chatterbot.corpus.english.science",
     "chatterbot.corpus.english.computers",
     "chatterbot.corpus.english.conversations",
-    "chatterbot.corpus.english.emotions",
+    "chatterbot.corpus.english.emotion",
     wd + "/rec.yml"
     )
 
