@@ -33,15 +33,6 @@ INSTALLED_APPS = (
 CHATTERBOT = {
     'name': 'RIBA',
     'django_app_name': 'django_chatterbot'
-    'logic_adapters': [
-        {
-            'import_path': 'chatterbot.logic.BestMatch',
-        },
-        {
-            'import_path': 'chatterbot.logic.MathematicalEvaluation',
-        }
-    ],
-'storage_adapter': 'chatterbot.storage.DjangoStorageAdapter',
 }
 
 
