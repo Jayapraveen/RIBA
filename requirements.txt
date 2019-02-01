@@ -1,5 +1,6 @@
 Django>=1.11,<1.12
 chatterbot
+chatterbot-corpus
 gunicorn
 whitenoise
 dj-database-url
