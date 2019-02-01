@@ -20,7 +20,6 @@ if ON_HEROKU:
     "chatterbot.corpus.english.literature",
     "chatterbot.corpus.english.psychology",
     "chatterbot.corpus.english.science",
-    "chatterbot.corpus.english.computers",
     "chatterbot.corpus.english.emotion",
     wd + "/rec.yml"
     )
