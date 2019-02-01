@@ -20,6 +20,7 @@ if ON_HEROKU:
 
 else: #on Travis
     chatbot = ChatBot('RIBA')
+    trainer = ChatterBotCorpusTrainer(chatbot)
     trainer.train("chatterbot.corpus.english",
     wd + "/rec/rec.yml"
     )
