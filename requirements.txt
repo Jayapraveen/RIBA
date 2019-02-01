@@ -1,6 +1,5 @@
-Django>=1.11,<1.12
+Django>=2.1,<2.2
 chatterbot
-chatterbot-corpus
 gunicorn
 whitenoise
 dj-database-url
