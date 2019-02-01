@@ -9,11 +9,10 @@ wd = os.getcwd()
 ON_HEROKU = os.environ.get('ON_HEROKU')
 
 if ON_HEROKU:
-    dbi = dj_database_url.config()
-    print(dbi)
+    uri = os.environ.get('DATABASE_URL')
     chatbot = ChatBot('RIBA',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri= dbi)
+    database_uri= uri)
     trainer = ChatterBotCorpusTrainer(chatbot)
     os.system("wget http://riba-support.000webhostapp.com/RIBA/training-data/rec.yml")
     trainer.train("chatterbot.corpus.english",
