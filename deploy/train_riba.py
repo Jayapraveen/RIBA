@@ -13,13 +13,13 @@ if ON_HEROKU:
     chatbot = ChatBot('RIBA',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     database_uri=uri)
-    trainer = ChatterBotCorpusTrainer(chatbot)
+    trainer = ChatterBotCorpusTrainer(chatbot, show_training_progress=False)
     os.system("wget http://riba-support.000webhostapp.com/RIBA/training-data/rec.yml")
     trainer.train("chatterbot.corpus.english.greetings",
     "chatterbot.corpus.english.ai",
     "chatterbot.corpus.english.literature",
     "chatterbot.corpus.english.psychology",
-    "chatterbot.corpus.english.science",
+    "chatterbot.corpus.english.conversations",
     "chatterbot.corpus.english.emotion",
     wd + "/rec.yml"
     )
