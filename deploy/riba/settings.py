@@ -43,7 +43,7 @@ CHATTERBOT = {
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
         'chatterbot.corpus.english',
-        '$path/rec/rec.yml'
+        '/home/travis/build/Jayapraveen/RIBA/deploy/rec/rec.yml'
     ]
 }
 
