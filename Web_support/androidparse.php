@@ -132,7 +132,7 @@ $post = json_encode([
   'text' => $query
 ]);
 
-$ch = curl_init('http://riba-testing0.herokuapp.com/chatterbot/');
+$ch = curl_init('https://rec-riba.herokuapp.com/chatterbot/');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 
