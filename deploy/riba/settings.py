@@ -31,6 +31,8 @@ INSTALLED_APPS = (
     'riba',
 )
 
+path = os.path.dirname(os.path.abspath(__file__)) + '/rec/rec.yml'
+
 # ChatterBot settings
 
 CHATTERBOT = {
@@ -43,7 +45,7 @@ CHATTERBOT = {
     'trainer': 'chatterbot.trainers.ChatterBotCorpusTrainer',
     'training_data': [
         'chatterbot.corpus.english',
-        $path +'/rec/rec.yml'
+        path
     ]
 }
 
