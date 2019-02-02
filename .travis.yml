@@ -5,8 +5,6 @@ python:
 - 3.6.7
 services:
   - postgresql
-addons:
-  postgresql: '9.6'
 before_script:
   - psql -c 'create database travis_ci_riba;' -U postgres
 install:
@@ -17,8 +15,8 @@ script:
 - path="$(pwd)"
 - echo "$path"
 - python manage.py migrate
-- python train_riba.py
-- gunicorn riba.wsgi --log-file - & sleep 20 | trap exit INT
+- python manage.py train
+- python manage.py runserver 0:8000 & sleep 20 | trap exit INT
 deploy:
   provider: heroku
   api_key:

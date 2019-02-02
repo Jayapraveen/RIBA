@@ -1,4 +1,4 @@
-Django>=1.11,<1.12
+Django==1.11
 chatterbot
 gunicorn
 whitenoise

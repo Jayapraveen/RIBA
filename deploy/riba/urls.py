@@ -1,10 +1,11 @@
-from django.conf.urls import url
+from django.conf.urls import include, url
 from django.contrib import admin
-from riba.views import ChatterBotAppView, ChatterBotApiView
+from chatterbot.ext.django_chatterbot import urls as chatterbot_urls
+from riba.views import ChatterBotAppView
 
 
 urlpatterns = [
     url(r'^$', ChatterBotAppView.as_view(), name='main'),
-    url(r'^admin/', admin.site.urls, name='admin'),
-    url(r'^api/chatterbot/', ChatterBotApiView.as_view(), name='chatterbot'),
+    url(r'^admin/', include(admin.site.urls), name='admin'),
+    url(r'^chatterbot/', include('chatterbot.ext.django_chatterbot.urls', namespace='chatterbot')),
 ]

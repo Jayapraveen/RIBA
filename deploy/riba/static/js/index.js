@@ -1,5 +1,5 @@
 var $sayButton = $('.message-submit');
-var chatterbotUrl = '/api/chatterbot/';
+var chatterbotUrl = '/chatterbot/';
 
 
 var $messages = $('.messages-content'),
