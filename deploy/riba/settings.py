@@ -31,7 +31,7 @@ INSTALLED_APPS = (
     'riba',
 )
 
-path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/rec/rec.yml'
+path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/rec/'
 
 # ChatterBot settings
 
